@@ -1,4 +1,4 @@
-# Quotation App - Midterm Project
+# Quotation App - Midterm Project - Min Myint Moh Soe
 
 A quotation management application built with React.js and Material-UI (MUI). This application allows users to create, manage, and calculate quotations with advanced features including discount management, intelligent item merging, and responsive design.
 
