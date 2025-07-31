@@ -14,7 +14,7 @@ A quotation management application built with React.js and Material-UI (MUI). Th
 - **Discount Calculations**: `Amount = (Price × Quantity) - Discount`
 - **Total Summaries**: Automatic calculation of total discounts and final amounts
 
-## 🛠 Technology Stack
+## Technology Stack
 
 - **Frontend Framework**: React 18.3.1
 - **UI Library**: Material-UI (MUI) 6.1.7
