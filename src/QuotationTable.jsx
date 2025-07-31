@@ -67,15 +67,22 @@ function QuotationTable({ data, deleteByIndex, clearAll }) {
       </Button>
 
       <TableContainer component={Paper}>
-        <Table>
+        <Table sx={{ 
+          '& .MuiTableCell-root': {
+            borderRight: '1px solid rgba(224, 224, 224, 1)',
+          },
+          '& .MuiTableCell-root:last-child': {
+            borderRight: 'none',
+          }
+        }}>
           <TableHead>
-            <TableRow>
-              <TableCell align="center">-</TableCell>
-              <TableCell align="center">Qty</TableCell>
-              <TableCell align="center">Item</TableCell>
-              <TableCell align="center">Price/Unit</TableCell>
-              <TableCell align="center">Discount</TableCell>
-              <TableCell align="center">Amount</TableCell>
+            <TableRow sx={{ backgroundColor: '#f5f5f5' }}>
+              <TableCell align="center" sx={{ fontWeight: 'bold' }}>-</TableCell>
+              <TableCell align="center" sx={{ fontWeight: 'bold' }}>Qty</TableCell>
+              <TableCell align="center" sx={{ fontWeight: 'bold' }}>Item</TableCell>
+              <TableCell align="center" sx={{ fontWeight: 'bold' }}>Price/Unit</TableCell>
+              <TableCell align="center" sx={{ fontWeight: 'bold' }}>Discount</TableCell>
+              <TableCell align="center" sx={{ fontWeight: 'bold' }}>Amount</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -100,21 +107,21 @@ function QuotationTable({ data, deleteByIndex, clearAll }) {
             })}
           </TableBody>
           <TableFooter>
-            <TableRow>
-              <TableCell colSpan={4} align="right">
-                <strong>Total Discount:</strong>
+            <TableRow sx={{ backgroundColor: '#f9f9f9' }}>
+              <TableCell colSpan={4} align="right" sx={{ fontWeight: 'bold' }}>
+                Total Discount:
               </TableCell>
-              <TableCell align="right">
-                <strong>{totalDiscount.toFixed(2)}</strong>
+              <TableCell align="right" sx={{ fontWeight: 'bold' }}>
+                {totalDiscount.toFixed(2)}
               </TableCell>
               <TableCell />
             </TableRow>
-            <TableRow>
-              <TableCell colSpan={5} align="right">
-                <strong>Total:</strong>
+            <TableRow sx={{ backgroundColor: '#e3f2fd' }}>
+              <TableCell colSpan={5} align="right" sx={{ fontWeight: 'bold', fontSize: '1.1rem' }}>
+                Total:
               </TableCell>
-              <TableCell align="right">
-                <strong>{total.toFixed(2)}</strong>
+              <TableCell align="right" sx={{ fontWeight: 'bold', fontSize: '1.1rem' }}>
+                {total.toFixed(2)}
               </TableCell>
             </TableRow>
           </TableFooter>
